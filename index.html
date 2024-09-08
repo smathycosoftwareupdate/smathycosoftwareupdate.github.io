@@ -74,7 +74,6 @@
         background-color: #005f6b;
     }
 </style>
-
 <div class="container">
     <h1>Latest News</h1>
     <p>Stay updated with the latest SmathyCo news here.</p>
@@ -86,3 +85,19 @@
         <a href="https://github.com/SmathyCo/SmathyCo-Software/releases" class="button" target="_blank">Download Now</a>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all links with the class 'button'
+        const buttons = document.querySelectorAll('a.button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); // Prevent the default action
+                const url = button.href;
+                // Open the link in the default browser
+                window.open(url, '_blank');
+            });
+        });
+    });
+</script>
